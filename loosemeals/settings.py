@@ -130,4 +130,6 @@ STATIC_ROOT = BASE_DIR / "static"
 import os
 
 APP_NAME = os.environ.get("FLY_APP_NAME")
-ALLOWED_HOSTS += [f"{APP_NAME}.fly.dev", "127.0.0.1"]
+ALLOWED_HOSTS += [f"{APP_NAME}.fly.dev", "127.0.0.1", "localhost", "loosemeals.com", "www.loosemeals.com"]
+
+CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev', 'https://loosemeals.com', 'https://www.loosemeals.com', 'https://loosemeals.fly.dev']
