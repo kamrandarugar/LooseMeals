@@ -16,7 +16,7 @@
   <meta name="author"
         content="Kamran Darugar" />
   <!-- link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" / -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/food/logo2.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/food/pp.png' %}">
   {% block css %}
   <script src="https://cdn.tailwindcss.com"></script>
 <!-- Your stuff: Third-party CSS libraries go here -->
@@ -43,7 +43,7 @@
 <header class="text-gray-600 body-font">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-black-900 mb-4 md:mb-0" href="/dashboard">
-      <img src="{% static 'images/food/pp.png' %}" alt="My image" width="80px">
+      <img src="{% static 'images/food/pp.png' %}" alt="My image" width="80px" class="rounded-full">
       <a href="/dashboard" class="ml-3 text-xl">Loose Meals</a>
     </a>
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
@@ -52,7 +52,6 @@
       <a href="/ratings" class="mr-5 hover:text-gray-900">Ratings</a>
       <a href="/about" class="mr-5 hover:text-gray-900">About</a>
       <a href="/contact" class="mr-5 hover:text-gray-900">Contact</a>
-      <a href="/shop" class="mr-5 hover:text-gray-900">Shop</a>
       
 
       
