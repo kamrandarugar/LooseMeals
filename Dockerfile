@@ -9,6 +9,12 @@ RUN mkdir -p /code
 
 WORKDIR /code
 
+# install psycopg2 dependencies
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*  # <-- Updated!
+
 COPY requirements.txt /tmp/requirements.txt
 RUN set -ex && \
     pip install --upgrade pip && \
@@ -17,6 +23,7 @@ RUN set -ex && \
 COPY . /code
 
 ENV SECRET_KEY "NYRGxKMN8I9x90UG5YWuJ0fY2OW4qFG9XcaCXnYDdIp7vFsjFf"
+ENV DATABASE_URL=sqlite:///db.sqlite3
 RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
